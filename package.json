@@ -1,7 +1,7 @@
 {
-  "name": "moneris",
-  "version": "1.0.0",
-  "description": "A wrapper for Moneris API.",
+  "name": "react-native-moneris",
+  "version": "0.1.0",
+  "description": "A react native wrapper for Moneris API.",
   "main": "index.js",
   "scripts": {
     "check-deps": "npm outdated",
@@ -10,23 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaynair/moneris-js.git"
+    "url": "git+https://github.com/samsao/react-native-moneris.git"
   },
-  "keywords": [
-    "moneris",
-    "payment",
-    "api"
-  ],
-  "author": "Akshay Nair <hello@akshaynair.com> (https://www.akshaynair.com)",
+  "keywords": ["moneris", "payment", "api"],
+  "author": "Samsao Development Inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shaynair/moneris-js/issues"
+    "url": "https://github.com/samsao/react-native-moneris/issues"
   },
-  "homepage": "https://github.com/shaynair/moneris-js#readme",
+  "homepage": "https://github.com/samsao/react-native-moneris#readme",
   "dependencies": {
+    "axios": "^0.17.0",
     "bluebird": "^3.4.6",
-    "request": "^2.79.0",
-    "request-promise": "^4.1.1",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {

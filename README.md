@@ -1,6 +1,6 @@
-# node-moneris
+# react-native-moneris
 
-> A wrapper to access the Moneris API.
+> A wrapper to access the Moneris API from react native.
 
 [![NPM version](https://badge.fury.io/js/moneris.svg)](http://badge.fury.io/js/moneris) [![Build Status](https://travis-ci.org/shaynair/moneris-js.svg?branch=master)](https://travis-ci.org/shaynair/moneris-js?branch=master)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
@@ -15,7 +15,7 @@
 With [npm](https://npmjs.org/):
 
 ```bash
-npm install moneris --save
+yarn add react-native-moneris
 ```
 
 Note: You need **an engine that supports ES6 (e.g. Babel or Node 4.0+)**.
