@@ -17,11 +17,15 @@ module.exports = function send(credentials, req, extended) {
   if (extended === undefined) {
     extended = null;
   }
-
   if (!credentials || !req || !req.type || !credentials.store_id || !credentials.api_token) {
     return Promise.reject(new TypeError('Requires country_code, store_id, api_token'));
   }
-
+  if (credentials.country_code) {
+    credentials.country_code = credentials.country_code.toUpperCase();
+    if (credentials.country_code !== 'CA' && !globals.hasOwnProperty(credentials.country_code + '_HOST')) {
+      return Promise.reject(new TypeError('Invalid country code'));
+    }
+  }
   let data = {
     store_id: credentials.store_id,
     api_token: credentials.api_token,
@@ -39,8 +43,10 @@ module.exports = function send(credentials, req, extended) {
       }
     }
   }
-
   let prefix = '';
+  if (!!credentials.country_code && credentials.country_code !== 'CA') {
+    prefix += credentials.country_code + '_';
+  }
   let hostPrefix = prefix;
   let filePrefix = prefix;
   if (credentials.test) {
