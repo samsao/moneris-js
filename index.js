@@ -35,6 +35,7 @@ module.exports = function send(credentials, req, extended) {
     data.risk[req.type] = req;
   } else {
     data[req.type] = req;
+    delete data[req.type].type;
   }
   if (extended) {
     for (let key in extended) {
