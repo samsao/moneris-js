@@ -78,6 +78,6 @@ module.exports = function send(credentials, req, extended) {
   };
 
   return axios(request)
-    .then(res => xml.parseStringAsync(res.data))
-    .then(data => (Array.isArray(data.response.receipt) ? data.response.receipt[0] : data.response.receipt));
+    .then(res => xml.parseStringAsync(res.data, { explicitArray: false }))
+    .then(data => data.response.receipt);
 };

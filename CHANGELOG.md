@@ -1,3 +1,7 @@
+## 0.1.8
+
+Fixed issue with xml2js converting objects into arrays.
+
 ## 0.1.7
 
 Fixed parsing errors in xml2js.
