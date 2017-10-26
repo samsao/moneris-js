@@ -1,3 +1,11 @@
+## 0.1.5
+
+Updated data extraction to use `response` directly.
+
+## 0.1.4
+
+Updated method used to parse xml.
+
 ## 0.1.3
 
 Removed `type` from the request.

@@ -58,7 +58,7 @@ module.exports = function send(credentials, req, extended) {
   }
 
   const options = {
-    uri: globals.PROTOCOL + '://' + globals[hostPrefix + 'HOST'] + ':' + globals.PORT + globals[filePrefix + 'FILE'],
+    uri: globals.PROTOCOL + '://' + globals[hostPrefix + 'HOST'] + ':' + globals[filePrefix + 'FILE'],
     method: 'POST',
     body: xmlBuilder.buildObject(data),
     headers: {
@@ -78,6 +78,6 @@ module.exports = function send(credentials, req, extended) {
   };
 
   return axios(request)
-    .then(res => xml.parseStringAsync(res))
-    .then(res => (Array.isArray(res.response.receipt) ? res.response.receipt[0] : res.response.receipt));
+    .then(res => xml.parseString(res))
+    .then(resp => (Array.isArray(resp.receipt) ? resp.receipt[0] : resp.receipt));
 };
