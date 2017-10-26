@@ -1,3 +1,7 @@
+## 0.1.6
+
+Reverted xml parsing method.
+
 ## 0.1.5
 
 Updated data extraction to use `response` directly.
