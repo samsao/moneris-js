@@ -1,3 +1,7 @@
+## 0.1.7
+
+Fixed parsing errors in xml2js.
+
 ## 0.1.6
 
 Reverted xml parsing method.
