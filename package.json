@@ -1,9 +1,11 @@
 {
   "name": "react-native-moneris",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "A react native wrapper for Moneris API.",
   "main": "index.js",
   "scripts": {
+    "build": "babel src -d .",
+    "prepublish": "npm run-script build && npm run-script test",
     "check-deps": "npm outdated",
     "lint": "standard",
     "test": "blue-tape ./tests/test.js"
@@ -25,6 +27,8 @@
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "blue-tape": "^1.0.0",
     "debug": "^2.3.3",
     "standard": "^8.6.0",
